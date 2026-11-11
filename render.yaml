@@ -1,0 +1,25 @@
+# Optional Render blueprint (100% free plan). You can also click everything together by hand.
+services:
+  - type: web
+    name: us-and-ours
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: BATMAN_CODE
+        sync: false
+      - key: CINDERELLA_CODE
+        sync: false
+      - key: TURSO_DATABASE_URL
+        sync: false
+      - key: TURSO_AUTH_TOKEN
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true

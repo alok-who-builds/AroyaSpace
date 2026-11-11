@@ -1,0 +1,9 @@
+{
+  "name": "us-and-ours-backend",
+  "version": "1.1.0",
+  "description": "Private two-person savings scrapbook: Express + Socket.IO + Turso (SQLite)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node test/store.test.js" },
+  "engines": { "node": ">=22.13" },
+  "dependencies": { "@libsql/client": "^0.14.0", "express": "^4.19.2", "socket.io": "^4.7.5" }
+}

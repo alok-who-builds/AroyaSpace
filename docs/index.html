@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3e9d8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>us &amp; ours.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section id="login" class="login" hidden>
+    <div class="sheet login-sheet">
+      <span class="tape t-left"></span><span class="tape t-right"></span>
+      <h1 class="logo">us &amp; ours.</h1>
+      <p class="hand">who's opening our book?</p>
+      <div class="who" role="radiogroup">
+        <button type="button" class="sticker" data-who="batman" role="radio" aria-checked="false">🦇<b>Batman</b></button>
+        <button type="button" class="sticker" data-who="cinderella" role="radio" aria-checked="false">👠<b>Cinderella</b></button>
+      </div>
+      <form id="loginForm" autocomplete="off">
+        <label class="hand" for="code">our secret code</label>
+        <input id="code" type="password" inputmode="text" autocomplete="current-password" placeholder="shh…" maxlength="100">
+        <p id="loginErr" class="err" role="alert"></p>
+        <button class="btn" id="loginBtn" type="submit">open our book ♡</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="book" hidden>
+    <div id="conn" class="conn" hidden></div>
+    <main id="page" class="page"></main>
+    <nav class="tabs" aria-label="pages">
+      <a href="#home" data-p="home">Our Home</a>
+      <a href="#diary" data-p="diary">Savings Diary</a>
+      <a href="#wishlist" data-p="wishlist">Wishlist</a>
+      <a href="#dreams" data-p="dreams">Our Dreams</a>
+      <a href="#memories" data-p="memories">Memories</a>
+    </nav>
+  </div>
+
+  <div id="modal" class="modal" hidden></div>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.7.5/dist/socket.io.min.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/network.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
